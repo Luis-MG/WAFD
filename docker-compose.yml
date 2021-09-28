@@ -1,20 +1,6 @@
 version: '3'
 
 services:
-  api:
-    build: ./api
-    ports: 
-      - 5000:80
-    depends_on: 
-      - db
-
-  website:
-    build: ./web
-    ports:
-      - 80:80
-    depends_on:
-      - api
-
   faker-service:
     build: ./faker
     ports:
@@ -23,7 +9,21 @@ services:
   db:
     build: ./db
     hostname: db
+    env_file:
+      - ./db/db.env
     ports:
       - 3306:3306
-    
-    
+
+  api:
+    build: ./api
+    ports: 
+      - 5000:80
+    depends_on: 
+      - db 
+
+  website:
+    build: ./web
+    ports:
+      - 80:80
+    depends_on:
+      - api
