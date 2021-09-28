@@ -6,7 +6,7 @@ services:
     ports: 
       - 5000:80
     depends_on: 
-      - database
+      - db
 
   website:
     build: ./web
@@ -20,9 +20,9 @@ services:
     ports:
       - 5001:80
 
-  database:
+  db:
     build: ./db
-    hostname: database
+    hostname: db
     ports:
       - 3306:3306
     
