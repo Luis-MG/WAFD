@@ -1,0 +1,7 @@
+FROM mysql:latest
+ENV MYSQL_ROOT_PASSWORD="M@sterRoot"
+ENV MYSQL_DATABASE="wafd"
+ENV MYSQL_USER="db_user"
+ENV MYSQL_PASSWORD="M@ster123"
+VOLUME /var/lib/mysql
+EXPOSE 3306
