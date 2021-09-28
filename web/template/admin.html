@@ -37,7 +37,7 @@
             $('#add_data').click(function(){
                 $.ajax({
                     type: 'GET',
-                    url: "/add_person",
+                    url: "http://api/add_person",
                     headers: {
                         'Access-Control-Allow-Credentials' : true,
                         'Access-Control-Allow-Origin':'*',
@@ -63,7 +63,7 @@
             $('#delete_data').click(function(){
                 $.ajax({
                     type: 'DELETE',
-                    url: "/delete_persons",
+                    url: "http://api/delete_persons",
                     headers: {
                         'Access-Control-Allow-Credentials' : true,
                         'Access-Control-Allow-Origin':'*',

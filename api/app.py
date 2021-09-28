@@ -44,7 +44,7 @@ persons_schema = PersonSchema(many=True)
 @app.route('/add_person')
 @cross_origin()
 def add_person():
-   url = 'http://faker-service:5001/datos'
+   url = 'http://faker-service/datos'
    response = requests.get(url)
    response_json = json.loads(response.text)
    for person in response_json["datos"]:
