@@ -8,6 +8,7 @@ services:
     depends_on: 
       - db
 
+
   website:
     build: ./web
     ports:
@@ -20,9 +21,17 @@ services:
     ports:
       - 5001:80
 
-  db:
-    build: ./db
-    hostname: db
+  database:
+    #build: ./db
+    image: mysql:latest
+    hostname: database
+    environment:
+      MYSQL_ROOT_PASSWORD: M@st3rRoot
+      MYSQL_DATABASE: wafd
+      MYSQL_USER: db_user
+      MYSQL_PASSWORD: M4ster123
     ports:
       - 3306:3306
+    volumes:
+      - ./db:/var/lib/mysql
     
