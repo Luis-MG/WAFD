@@ -26,7 +26,7 @@
    <b style="align-items: center;">Status: </b><p id="msg">No action</p>
    </div>
    <br>
-    <a href="http://localhost/">
+    <a href="/">
         <button >Home</button>
     </a>
     <script type="text/javascript" src="../static/js/jquery-3.6.0.min.js"></script>
@@ -37,7 +37,7 @@
             $('#add_data').click(function(){
                 $.ajax({
                     type: 'GET',
-                    url: "http://api:5000/add_person",
+                    url: "/add_person",
                     headers: {
                         'Access-Control-Allow-Credentials' : true,
                         'Access-Control-Allow-Origin':'*',
@@ -63,7 +63,7 @@
             $('#delete_data').click(function(){
                 $.ajax({
                     type: 'DELETE',
-                    url: "http://api:5000/delete_persons",
+                    url: "/delete_persons",
                     headers: {
                         'Access-Control-Allow-Credentials' : true,
                         'Access-Control-Allow-Origin':'*',

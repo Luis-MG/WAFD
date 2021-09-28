@@ -25,7 +25,7 @@
             </tr>
         </thead>
     </table>
-    <a href="http://localhost/admin">
+    <a href="/admin">
     <button >Admin</button>
     </a>
     <script type="text/javascript" src="../static/js/jquery-3.6.0.min.js"></script>
@@ -35,7 +35,7 @@
         $(document).ready(function() {
             $.ajax({
                 type: 'GET',
-                url: "http://api:5000/get_persons",
+                url: "/get_persons",
                 contentType: "application/json",
                 headers: {
                     'Access-Control-Allow-Credentials' : true,
