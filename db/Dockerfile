@@ -1,4 +1,4 @@
-FROM mysql:latest
+FROM mysql:5.7
 ENV MYSQL_ROOT_PASSWORD=M4sterRoot
 ENV MYSQL_DATABASE=wafd
 ENV MYSQL_USER=db_user
