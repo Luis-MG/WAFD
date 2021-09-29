@@ -72,7 +72,7 @@ def get_persons():
 
 # eliminar registros
 @app.route('/delete_persons', methods=['DELETE'])
-@cross_origin()
+@cross_origin(methods=['DELETE'])
 def delete_persons():
    rows_deleted = db.session.query(Person).delete()
    db.session.commit()
