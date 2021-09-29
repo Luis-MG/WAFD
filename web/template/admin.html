@@ -62,12 +62,12 @@
 
             $('#delete_data').click(function(){
                 $.ajax({
-                    type: 'DELETE',
+                    type: 'GET',
                     url: "/delete_persons",
                     headers: {
                         'Access-Control-Allow-Credentials' : true,
                         'Access-Control-Allow-Origin':'*',
-                        'Access-Control-Allow-Methods':'DELETE',
+                        'Access-Control-Allow-Methods':'GET',
                         'Access-Control-Allow-Headers':'application/json',
                     },
                     beforeSend: function(){
