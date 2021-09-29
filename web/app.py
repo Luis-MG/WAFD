@@ -29,7 +29,7 @@ def add_person():
 @app.route('/delete_persons')
 def delete_persons():
     url = 'http://api/delete_persons'
-    response = requests.get(url) 
+    response = requests.delete(url) 
     response_json = json.loads(response.text)
     return response_json
 
